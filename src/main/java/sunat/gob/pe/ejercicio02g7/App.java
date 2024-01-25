@@ -13,6 +13,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -39,14 +40,23 @@ public class App extends Application {
         Button btnEstimado = new Button("Estimado");
         btnEstimado.setPrefSize(80, 25);
         
+        /*Horizontal Box*/
         HBox hbox = new HBox(btnActual, btnProyectado, btnEstimado);
         hbox.setSpacing(5);
         Insets sangria = new Insets(10,0,0,0);
         hbox.setPadding(sangria);
         hbox.setAlignment(Pos.BASELINE_CENTER);
         
+        Label lblData = new Label("Data");
+        Label lblVentas = new Label("Ventas");
+        Label lblMarketing = new Label("Marketing");
+        Label lblDistribucion = new Label("Distribucion");
+        Label lblCostos = new Label("Costos");
+
+        VBox vbox = new VBox(lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
         
-        var scene = new Scene(hbox, 640, 480);
+        
+        var scene = new Scene(vbox, 640, 480);
         
 
 
