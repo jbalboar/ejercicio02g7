@@ -47,14 +47,28 @@ public class App extends Application {
         hbox.setPadding(sangria);
         hbox.setAlignment(Pos.BASELINE_CENTER);
         
-        Label lblData = new Label("Data");
-        Label lblVentas = new Label("Ventas");
-        Label lblMarketing = new Label("Marketing");
-        Label lblDistribucion = new Label("Distribucion");
-        Label lblCostos = new Label("Costos");
-
-        VBox vbox = new VBox(lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
         
+        /*Vertical Box*/
+        Insets sangriaLabel = new Insets(0,0,0,10);
+        
+        Label lblData = new Label("Data");
+        lblData.setPadding(sangriaLabel);
+        
+        Label lblVentas = new Label("Ventas");
+        lblVentas.setPadding(sangriaLabel);
+        
+        Label lblMarketing = new Label("Marketing");
+        lblMarketing.setPadding(sangriaLabel);
+        
+        Label lblDistribucion = new Label("Distribucion");
+        lblDistribucion.setPadding(sangriaLabel);
+        
+        Label lblCostos = new Label("Costos");
+        lblCostos.setPadding(sangriaLabel);
+
+        Insets sangriaVbox = new Insets(10,0,0,10);
+        VBox vbox = new VBox(lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
+        vbox.setPadding(sangriaVbox);
         
         var scene = new Scene(vbox, 640, 480);
         
